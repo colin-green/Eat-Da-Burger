@@ -8,7 +8,7 @@ var connection = mysql.createConnection({
     database: "burgers_db"
   });
   
-  // Make connection.
+  // Making the connection
   connection.connect(function(err) {
     if (err) {
       console.error("error connecting: " + err.stack);
@@ -17,6 +17,6 @@ var connection = mysql.createConnection({
     console.log("connected to db on thread " + connection.threadId);
   });
   
-  // Export connection for our ORM to use.
+  // Exporting the connection for ORM use
   module.exports = connection;
   
